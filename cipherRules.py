@@ -1,5 +1,4 @@
 '''
-
 Write a function that implements a substitution cipher. 
 In a substitution cipher one letter is substituted for another to garble the message. 
 For example A -> Q, B -> T, C -> G etc. 
@@ -24,3 +23,18 @@ def cipherRules(inputString, skipNumber):
 
 print(cipherRules(
 	'Write a function that implements a substitution cipher. In a substitution cipher one letter is substituted for another to garble the message.', 1))
+
+def deCipherRules(cipherString, skipNumber=1):
+
+	sentCharList = [c for c in cipherString]
+	convertedList = []
+    
+	for char in sentCharList:
+        
+		newChar = chr(ord(char)-skipNumber)
+		convertedList.append(newChar)
+        
+	return ''.join(convertedList)
+	
+print(deCipherRules(cipherRules(
+		'Write a function that implements a substitution cipher. In a substitution cipher one letter is substituted for another to garble the message.', 1)))
