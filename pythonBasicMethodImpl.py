@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 strings = "Although Python provides us with many list methods, it is good practice and very instructive to think about how Python functions are implemented."
 lst = strings.split()
 i = "Python"
