@@ -13,7 +13,7 @@ with open("mystery.txt") as tturn:
         
         turn = eachTurn.split()
 
-        if turn == ["UP"]:
+        if turn == ["UP"]: # when we do the split(), it returns a list of the item. so we have to make our comparision as ["string"].
             run.up()
             turnList.append(eachTurn)
         elif turn == ["DOWN"]:
